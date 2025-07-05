@@ -2,7 +2,7 @@ const amqp = require('amqplib');
 
 async function takeMessage(queue) {
     try {
-        const connection = await amqp.connect('amqp://127.0.0.1'); // Укажите адрес вашего RabbitMQ сервера
+        const connection = await amqp.connect(''); // Укажите адрес вашего RabbitMQ сервера
         const channel = await connection.createChannel();
 
         const exchange = 'direct';
